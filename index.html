@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra - papier, kamień, nożyce</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="game-box">
+        <h1>Zagrajmy w papier, kamień, nożyce!</h1>
+        <button class="new-game-btn btn">Kliknij, aby rozpocząć nową grę</button>
+        <h3>Wybierz swój ruch:</h3>
+        <div class="game-panel">
+            <div class="game-buttons">
+                <button class="paper btn game-btn nohover" disabled>papier ✋</button>
+                <button class="rock btn game-btn nohover" disabled>kamień ✊</button>
+                <button class="scissors btn game-btn nohover" disabled>nożyce ✌</button>
+            </div>
+            <div class="game-score">
+                <p class="result"></p>
+                <p class="final-result"></p>
+                <div class="scoreboard">
+                    <p class="scoreboard-text">Gramy do: <span class="round-number"></span></p>
+                    <div class="scoreboard-items">
+                        <div class="scoreboard-item">
+                            <p>Wygrane gracza:</p>
+                            <p class="player-score">0</p>
+                        </div>
+                        <div class="scoreboard-item">
+                            <p>Wygrane komputera:</p>
+                            <p class="computer-score">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-round">
+        <div class="game-round-items">
+            <label for="game-input">Jaka liczba punktów oznacza zwycięstwo? Wpisz liczbę od 0 do 99 i zatwierdź przyciskiem</label>
+            <input id="game-input" type="number" maxlength="2" min="1" max="99" onkeyup="validateInput()">
+        </div>
+        <p class="warning-text"></p>
+        <button class="game-round-btn btn">Potwierdź</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
